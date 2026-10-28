@@ -3,181 +3,1565 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel = "stylesheet" href = "style.css">
-        <title>AI Job Tracker</title>
-    <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <title>AI Job Tracker</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- sidebar -->
-     <aside class ="sidebar">
-        <div class="logo">
-            <span><i class="fa-solid fa-robot"></i></span>
-            AI Job Tracker
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                <i class="fa-solid fa-robot"></i>
+            </div>
+
+            <div>
+                <h2>AI Job Tracker</h2>
+                <p>Career Assistant</p>
+            </div>
+
         </div>
+
+
         <nav>
-            <a href="#" class ="active"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
-            <a href="#"><i class="fa-solid fa-briefcase"></i>My Applications</a>
-            <a href="#"><i class="fa-solid fa-file-lines"></i>Resume Analyzer</a>
-            <a href ="#"><i class="fa-solid fa-chart-pie"></i>Analytics</a>
-            <a href ="#"><i class="fa-solid fa-gear"></i>Settings</a>
+
+            <a href="#homeSection" class="nav-link active">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#dashboardSection" class="nav-link">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#applicationsSection" class="nav-link">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>My Applications</span>
+            </a>
+
+            <a href="#resumeAnalyzerSection" class="nav-link">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Resume Analyzer</span>
+            </a>
+
+            <a href="#analyticsSection" class="nav-link">
+                <i class="fa-solid fa-chart-column"></i>
+                <span>Analytics</span>
+            </a>
+
+            <a href="#settingsSection" class="nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
         </nav>
-        <div class="sidebar-bottom">
-            <a href ="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
-        </div>
 
-     </aside>
-     <!-- Main content -->
-      <main class ="main">
-        <!-- Topbar -->
-         <header class ="topbar">
-            <div>
 
-                <h1>Dashboard</h1>
-                <p>Track your job search journey .</p>
-            </div>
-            <div class ="profile">
-                <div class="avatar">S</div>
-                <div>
+        <a href="#" class="logout nav-link logout-link">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Logout</span>
+        </a>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+        <!-- ================= TOPBAR ================= -->
+
+        <header class="topbar">
+
+            
+
+
+            <div class="profile-area">
+
+                
+
+                <div class="profile-avatar">
+                    SM
+                </div>
+
+                <div class="profile-name">
                     <strong>Satyam</strong>
-                    <small>Job Seeker</small>
+                    <small>Frontend Developer</small>
                 </div>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================================================= -->
+        <!-- HOME -->
+        <!-- ================================================= -->
+
+        <section id="homeSection" class="page-section home-section">
+
+            <div class="home-hero">
+
+                <div>
+
+                    <p class="home-label">
+                        AI CAREER COMMAND CENTER
+                    </p>
+
+                    <h1>
+                        Welcome back, Satyam 👋
+                    </h1>
+
+                    <p>
+                        Track your applications, improve your resume,
+                        and move closer to your dream job.
+                    </p>
+
+                </div>
+
+
+                <div class="home-hero-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+
             </div>
 
 
-         </header>
-         <section class="stats">
-            <div class="stat-card">
-                <span><i class="fa-solid fa-briefcase"></i></span>
-            <div>
-            <p>Total Applications</p>
-            <h2>24</h2>
-             </div>
-             </div>
-             <div class="stat-card">
-                <span><i class="fa-solid fa-phone"></i></span>
-                <div>
-                    <p>Interviews</p>
-                    <h2>6</h2>
-                </div>
-             </div>
-             <div class="stat-card">
-                <span><i class="fa-solid fa-circle-xmark"></i></span>
-                <div>
-                    <p>Rejected</p>
-                    <h2>8</h2>
-                </div>
-             </div>
-             <div class="stat-card">
-                <span><i class="fa-solid fa-check-circle"></i></span>
-                <div><p>Selected</p>
-                    <h2>2</h2>
-                </div>
-             </div>
+            <!-- QUICK ACTIONS -->
 
-         </section>
-         <!-- Main-Grid -->
-          <section class="dashboard-grid">
-            <div class="card applications">
-                <div class="card-header">
+            <div class="home-card">
+
+                <h2>
+                    Quick Actions
+                </h2>
+
+                <p class="home-subtitle">
+                    Start your job search from here.
+                </p>
+
+
+                <div class="quick-actions">
+
+                    <button
+                        class="quick-action"
+                        id="homeAddJob"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        <span>
+                            <strong>Add Application</strong>
+                            <small>Track a new job</small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        id="homeAnalyzeResume"
+                    >
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                        <span>
+                            <strong>Analyze Resume</strong>
+                            <small>Improve your resume</small>
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        id="homeAnalytics"
+                    >
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <span>
+                            <strong>View Analytics</strong>
+                            <small>Check your progress</small>
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAREER GRID -->
+
+            <div class="home-grid">
+
+                <!-- CAREER GOAL -->
+
+                <div class="home-card">
+
+                    <h2>
+                        <i class="fa-solid fa-bullseye"></i>
+                        Career Goal
+                    </h2>
+
+
+                    <div class="career-goal">
+
+                        <h3>
+                            Frontend Developer
+                        </h3>
+
+                        <p>
+                            Target Role
+                        </p>
+
+
+                        <div class="progress-info">
+
+                            <span>
+                                Application Progress
+                            </span>
+
+                            <strong id="homeProgressText">
+                                0 / 20
+                            </strong>
+
+                        </div>
+
+
+                        <div class="progress-bar">
+
+                            <div id="homeProgress"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- AI TIP -->
+
+                <div class="home-card ai-tip-card">
+
+                    <h2>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        AI Career Tip
+                    </h2>
+
+
+                    <p id="aiCareerTip">
+                        Keep your resume updated according
+                        to the job description before applying.
+                    </p>
+
+
+                    <button id="newTipBtn">
+
+                        <i class="fa-solid fa-rotate"></i>
+                        New Tip
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- UPCOMING INTERVIEWS -->
+
+            <div class="home-card">
+
+                <div class="home-card-header">
+
                     <div>
-                        <h2>Recent Applications</h2>
-                        <p>Your latest job applications</p>
-                    </div>
-                    <button class="view-btn">View All</button>
-                </div>
-                <div class="job-list">
-                    <div class="job">
-                        <div class="company-logo">T</div>
-                        <div class="job-info">
-                            <h3>Frontend Developer</h3>
-                            <p>TCS Remote</p>
-                        </div>
-                        <span class="status interview">
-                            Interview Scheduled
-                        </span>
-                    </div>
-                    <div class="job">
-                        <div class="company-logo">G</div>
-                        <div class="job-info">
-                            <h3>Web Developer</h3>
-                            <p>Google Banglore</p>
-                        </div>
-                        <span class="status applied">
-                            Applied
-                        </span>
 
-                    </div>
-                    <div class="job">
-                        <div class="company-logo">M</div>
-                        <div class="job-info">
-                            <h3>software Engineer</h3>
-                            <p>Microsoft Hydrabad</p>
-                        </div>
-                        <span class="status selected">
-                            Selected
-                        </span>
-                        
-                    </div>
-                    <div class="job">
-                        <div class="company-logo">I</div>
-                        <div class="job-info">
-                            <h3>Python Dveloper</h3>
-                            <p>Infosys Pune</p>
-                        </div>
-                        <span class="status rejected">
-                            Rejected
-                        </span>
+                        <h2>
+                            <i class="fa-solid fa-calendar-check"></i>
+                            Upcoming Interviews
+                        </h2>
+
+                        <p class="home-subtitle">
+                            Your scheduled interviews
+                        </p>
+
                     </div>
 
                 </div>
+
+
+                <div id="homeInterviews">
+
+                    <div class="empty-interview">
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        <p>
+                            No upcoming interviews
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
-            <!-- Resume Analyzer -->
-<div class="card analyzer">
-    <div class="card-header">
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- DASHBOARD -->
+        <!-- ================================================= -->
+
+        <section
+            id="dashboardSection"
+            class="page-section"
+            hidden
+        >
+
+            <!-- STATS -->
+
+            <section class="stats">
+
+                <div class="stat-card applications-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+
+                    <div>
+                        <p>Total Applications</p>
+                        <h2 id="dashboardApplications">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card interviews-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <div>
+                        <p>Interviews</p>
+                        <h2 id="dashboardInterviews">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card rejected-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+
+                    <div>
+                        <p>Rejected</p>
+                        <h2 id="dashboardRejected">0</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card selected-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <p>Selected</p>
+                        <h2 id="dashboardSelected">0</h2>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-area">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search company or job title..."
+                    >
+
+                </div>
+
+
+                <select id="statusFilter">
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="Applied">
+                        Applied
+                    </option>
+
+                    <option value="Interview">
+                        Interview
+                    </option>
+
+                    <option value="Rejected">
+                        Rejected
+                    </option>
+
+                    <option value="Selected">
+                        Selected
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DASHBOARD CONTENT -->
+
+            <div class="content-grid">
+
+
+                <!-- APPLICATIONS -->
+
+                <div class="applications-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                <i class="fa-solid fa-briefcase"></i>
+                                Recent Applications
+                            </h2>
+
+                            <p>
+                                Track your latest job applications.
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="add-job-btn"
+                            id="addJobBtn"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+                            Add Application
+
+                        </button>
+
+                    </div>
+
+
+                    <div id="dashboardJobs">
+
+                        <!-- TCS -->
+
+                        <div
+                            class="job"
+                            data-company="TCS"
+                            data-title="Frontend Developer"
+                        >
+
+                            <div class="company-logo">
+                                T
+                            </div>
+
+
+                            <div class="job-info">
+
+                                <h3>
+                                    Frontend Developer
+                                </h3>
+
+                                <p>
+                                    TCS
+                                </p>
+
+                            </div>
+
+
+                            <select class="status-select">
+
+                                <option>Applied</option>
+                                <option>Interview</option>
+                                <option selected>Rejected</option>
+                                <option>Selected</option>
+
+                            </select>
+
+
+                            <button
+                                class="edit-btn"
+                                title="Edit"
+                            >
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+
+                            <button
+                                class="delete-btn"
+                                title="Delete"
+                            >
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+
+                        <!-- GOOGLE -->
+
+                        <div
+                            class="job"
+                            data-company="Google"
+                            data-title="Web Developer"
+                        >
+
+                            <div class="company-logo">
+                                G
+                            </div>
+
+
+                            <div class="job-info">
+
+                                <h3>
+                                    Web Developer
+                                </h3>
+
+                                <p>
+                                    Google
+                                </p>
+
+                            </div>
+
+
+                            <select class="status-select">
+
+                                <option>Applied</option>
+                                <option>Interview</option>
+                                <option selected>Rejected</option>
+                                <option>Selected</option>
+
+                            </select>
+
+
+                            <button
+                                class="edit-btn"
+                                title="Edit"
+                            >
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+
+                            <button
+                                class="delete-btn"
+                                title="Delete"
+                            >
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+
+                        <!-- MICROSOFT -->
+
+                        <div
+                            class="job"
+                            data-company="Microsoft"
+                            data-title="Software Engineer"
+                        >
+
+                            <div class="company-logo">
+                                M
+                            </div>
+
+
+                            <div class="job-info">
+
+                                <h3>
+                                    Software Engineer
+                                </h3>
+
+                                <p>
+                                    Microsoft
+                                </p>
+
+                            </div>
+
+
+                            <select class="status-select">
+
+                                <option>Applied</option>
+                                <option>Interview</option>
+                                <option>Rejected</option>
+                                <option selected>Selected</option>
+
+                            </select>
+
+
+                            <button
+                                class="edit-btn"
+                                title="Edit"
+                            >
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+
+                            <button
+                                class="delete-btn"
+                                title="Delete"
+                            >
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+
+                        <!-- INFOSYS -->
+
+                        <div
+                            class="job"
+                            data-company="Infosys"
+                            data-title="Python Developer"
+                        >
+
+                            <div class="company-logo">
+                                I
+                            </div>
+
+
+                            <div class="job-info">
+
+                                <h3>
+                                    Python Developer
+                                </h3>
+
+                                <p>
+                                    Infosys
+                                </p>
+
+                            </div>
+
+
+                            <select class="status-select">
+
+                                <option>Applied</option>
+                                <option>Interview</option>
+                                <option selected>Rejected</option>
+                                <option>Selected</option>
+
+                            </select>
+
+
+                            <button
+                                class="edit-btn"
+                                title="Edit"
+                            >
+                                <i class="fa-solid fa-pen"></i>
+                            </button>
+
+
+                            <button
+                                class="delete-btn"
+                                title="Delete"
+                            >
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESUME PANEL -->
+
+                <div class="resume-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                <i class="fa-solid fa-file-lines"></i>
+                                Resume Analyzer
+                            </h2>
+
+                            <p>
+                                Analyze your resume with AI.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="upload-area">
+
+                        <div class="upload-icon">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                        </div>
+
+
+                        <h2>
+                            Upload Resume
+                        </h2>
+
+
+                        <p>
+                            Upload your PDF resume to find
+                            skills and improve your resume.
+                        </p>
+
+
+                        <input
+                            type="file"
+                            id="resumeInput"
+                            accept=".pdf"
+                            hidden
+                        >
+
+
+                        <button
+                            class="upload-btn"
+                            id="uploadResumeBtn"
+                        >
+
+                            <i class="fa-solid fa-upload"></i>
+                            Choose Resume
+
+                        </button>
+
+
+                        <p
+                            class="file-name"
+                            id="fileName"
+                        ></p>
+
+                    </div>
+
+
+                    <div
+                        class="analysis-result"
+                        id="analysisResult"
+                        hidden
+                    >
+
+                        <div class="result-header">
+
+                            <h3>
+                                Resume Analysis
+                            </h3>
+
+                            <div class="resume-score">
+
+                                <span id="resumeScore">
+                                    0%
+                                </span>
+
+                                <small>
+                                    Resume Score
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="result-grid">
+
+                            <div class="result-card">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <h3>
+                                    Skills Found
+                                </h3>
+
+                                <p id="skillsFound">
+                                    No skills found yet.
+                                </p>
+
+                            </div>
+
+
+                            <div class="result-card">
+
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+
+                                <h3>
+                                    Missing Skills
+                                </h3>
+
+                                <p id="missingSkills">
+                                    No analysis yet.
+                                </p>
+
+                            </div>
+
+
+                            <div class="result-card">
+
+                                <i class="fa-solid fa-lightbulb"></i>
+
+                                <h3>
+                                    Suggestions
+                                </h3>
+
+                                <p id="resumeSuggestions">
+                                    Upload your resume to get suggestions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JOB MATCHING -->
+
+                    <div class="job-description">
+
+                        <h3>
+                            <i class="fa-solid fa-bullseye"></i>
+                            Job Description Matching
+                        </h3>
+
+
+                        <textarea
+                            id="jobDescription"
+                            placeholder="Paste the job description here..."
+                        ></textarea>
+
+
+                        <button
+                            class="match-btn"
+                            id="matchJobBtn"
+                        >
+
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Match Resume
+
+                        </button>
+
+
+                        <div
+                            id="jobMatchResult"
+                            class="job-match-result"
+                            hidden
+                        >
+
+                            <h3>
+                                Job Match
+                            </h3>
+
+                            <p>
+                                Match Score:
+                                <strong id="jobMatchScore">0%</strong>
+                            </p>
+
+                            <p>
+                                Required Skills:
+                                <span id="requiredSkills">-</span>
+                            </p>
+
+                            <p>
+                                Matched Skills:
+                                <span id="matchedSkills">-</span>
+                            </p>
+
+                            <p>
+                                Missing Skills:
+                                <span id="jobMissingSkills">-</span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- MY APPLICATIONS -->
+        <!-- ================================================= -->
+
+        <section
+            id="applicationsSection"
+            class="page-section"
+            hidden
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    <i class="fa-solid fa-briefcase"></i>
+                    My Applications
+                </h2>
+
+                <p>
+                    Manage and track all your job applications.
+                </p>
+
+            </div>
+
+
+            <div class="applications-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h2>All Applications</h2>
+                        <p>
+                            Update status, edit or remove applications.
+                        </p>
+                    </div>
+
+                    <button
+                        class="add-job-btn"
+                        id="applicationsAddBtn"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Add Application
+                    </button>
+
+                </div>
+
+
+                <div id="applicationsList"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- RESUME ANALYZER -->
+        <!-- ================================================= -->
+
+        <section
+            id="resumeAnalyzerSection"
+            class="page-section"
+            hidden
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    <i class="fa-solid fa-file-lines"></i>
+                    Resume Analyzer
+                </h2>
+
+                <p>
+                    Upload your resume and analyze your skills.
+                </p>
+
+            </div>
+
+
+            <div class="resume-panel standalone-resume">
+
+                <div class="upload-area">
+
+                    <div class="upload-icon">
+                        <i class="fa-solid fa-file-arrow-up"></i>
+                    </div>
+
+                    <h2>
+                        Upload Your Resume
+                    </h2>
+
+                    <p>
+                        Supported format: PDF
+                    </p>
+
+                    <input
+                        type="file"
+                        id="resumeInputStandalone"
+                        accept=".pdf"
+                        hidden
+                    >
+
+                    <button
+                        class="upload-btn"
+                        id="uploadStandaloneBtn"
+                    >
+                        <i class="fa-solid fa-upload"></i>
+                        Choose Resume
+                    </button>
+
+                    <p
+                        class="file-name"
+                        id="standaloneFileName"
+                    ></p>
+
+                </div>
+
+
+                <div
+                    class="analysis-result"
+                    id="standaloneAnalysisResult"
+                    hidden
+                >
+
+                    <div class="result-header">
+
+                        <h3>
+                            Resume Analysis
+                        </h3>
+
+                        <div class="resume-score">
+
+                            <span id="standaloneResumeScore">
+                                0%
+                            </span>
+
+                            <small>
+                                Resume Score
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-grid">
+
+                        <div class="result-card">
+
+                            <i class="fa-solid fa-check"></i>
+
+                            <h3>
+                                Skills Found
+                            </h3>
+
+                            <p id="standaloneSkillsFound">
+                                -
+                            </p>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+
+                            <h3>
+                                Missing Skills
+                            </h3>
+
+                            <p id="standaloneMissingSkills">
+                                -
+                            </p>
+
+                        </div>
+
+
+                        <div class="result-card">
+
+                            <i class="fa-solid fa-lightbulb"></i>
+
+                            <h3>
+                                Suggestions
+                            </h3>
+
+                            <p id="standaloneSuggestions">
+                                -
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- ANALYTICS -->
+        <!-- ================================================= -->
+
+        <section
+            id="analyticsSection"
+            class="page-section"
+            hidden
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    <i class="fa-solid fa-chart-column"></i>
+                    Analytics
+                </h2>
+
+                <p>
+                    Understand your job search performance.
+                </p>
+
+            </div>
+
+
+            <div class="analytics-section">
+
+                <div class="analytics-card">
+
+                    <h3>
+                        Total Applications
+                    </h3>
+
+                    <span id="totalApplications">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <h3>
+                        Interviews
+                    </h3>
+
+                    <span id="totalInterviews">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <h3>
+                        Rejected
+                    </h3>
+
+                    <span id="totalRejected">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="analytics-card">
+
+                    <h3>
+                        Selected
+                    </h3>
+
+                    <span id="totalSelected">
+                        0
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="analytics-section">
+
+                <div class="summary-box">
+
+                    <h3>
+                        Interview Rate
+                    </h3>
+
+                    <p id="interviewRate">
+                        0%
+                    </p>
+
+                </div>
+
+
+                <div class="summary-box">
+
+                    <h3>
+                        Selection Rate
+                    </h3>
+
+                    <p id="selectionRate">
+                        0%
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================================= -->
+        <!-- SETTINGS -->
+        <!-- ================================================= -->
+
+    
+        <section id="settingsSection" class="page-section">
+
+    <div class="section-header">
         <div>
-            <h2>AI Resume Analyzer</h2>
-            <p>Check your resume against a job.</p>
+            <h1>Settings</h1>
+            <p>Manage your profile and application preferences.</p>
         </div>
     </div>
-    <div class="analyzer-box">
-        <div class="upload-icon">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-        </div>
-        <h3>Analyze your Resume</h3>
-        <p>Upload your resume and get AI-powered feedback and job matching.</p>
-    
-    <button class="analyze-btn">
-        Analyze Resume
-    </button>
-</div>
-</div>
 
-          </section>
-          <section class="card skill-section">
-            <div class="card-header">
+    <!-- Profile Settings -->
+    <div class="settings-card">
+        <div class="settings-title">
+            <i class="fa-solid fa-user"></i>
             <div>
+                <h2>Profile Settings</h2>
+                <p>Update your career profile information.</p>
+            </div>
+        </div>
 
-                <h2>Skill Match</h2>
-                <p> Your current skills</p>
+        <div class="settings-form">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    id="settingsName"
+                    placeholder="Enter your name"
+                >
             </div>
 
-            <strong class="match-score">
-                78%
-            </strong>
+            <div class="form-group">
+                <label>Email</label>
+                <input
+                    type="email"
+                    id="settingsEmail"
+                    placeholder="Enter your email"
+                >
             </div>
-            <div class="skills">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span class="missing">React</span>
-                <span class="missing">TypeScript</span>
+
+            <div class="form-group">
+                <label>Target Role</label>
+                <input
+                    type="text"
+                    id="settingsRole"
+                    placeholder="e.g. Frontend Developer"
+                >
             </div>
-          </section>
-      </main>
-        <script src="script.js"></script>
+
+        </div>
+    </div>
+
+   
+
+    <!-- Notifications -->
+    <div class="settings-card">
+
+        <div class="settings-title">
+            <i class="fa-solid fa-bell"></i>
+            <div>
+                <h2>Notifications</h2>
+                <p>Manage your job search notifications.</p>
+            </div>
+        </div>
+
+        <div class="setting-row">
+            <div>
+                <h3>Interview Reminders</h3>
+                <p>Get reminders about upcoming interviews.</p>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox" id="interviewNotification" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-row">
+            <div>
+                <h3>Application Updates</h3>
+                <p>Receive updates about your applications.</p>
+            </div>
+
+            <label class="switch">
+                <input type="checkbox" id="applicationNotification" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+    </div>
+    <!-- Career Preferences -->
+<div class="settings-card">
+
+    <div class="settings-title">
+        <i class="fa-solid fa-bullseye"></i>
+        <div>
+            <h2>Career Preferences</h2>
+            <p>Tell us what kind of jobs you are looking for.</p>
+        </div>
+    </div>
+
+    <div class="settings-form">
+
+        <div class="form-group">
+            <label>Preferred Job Role</label>
+            <input
+                type="text"
+                id="preferredRole"
+                placeholder="e.g. Frontend Developer"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Location</label>
+            <input
+                type="text"
+                id="preferredLocation"
+                placeholder="e.g. Noida, Delhi"
+            >
+        </div>
+
+        <div class="form-group">
+            <label>Work Mode</label>
+            <select id="workMode">
+                <option value="">Select work mode</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="On-site">On-site</option>
+            </select>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Salary Preference -->
+<div class="settings-card">
+
+    <div class="settings-title">
+        <i class="fa-solid fa-money-bill-wave"></i>
+        <div>
+            <h2>Salary Preference</h2>
+            <p>Set your minimum expected salary.</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+
+        <label>Minimum Expected Salary</label>
+
+        <select id="minimumSalary">
+            <option value="">Select salary</option>
+            <option value="3">₹3 LPA</option>
+            <option value="4">₹4 LPA</option>
+            <option value="5">₹5 LPA</option>
+            <option value="6">₹6 LPA</option>
+            <option value="8">₹8 LPA</option>
+            <option value="10">₹10 LPA+</option>
+        </select>
+
+    </div>
+
+</div>
+
+
+<!-- Job Type -->
+<div class="settings-card">
+
+    <div class="settings-title">
+        <i class="fa-solid fa-briefcase"></i>
+        <div>
+            <h2>Job Type</h2>
+            <p>Select the opportunities you are interested in.</p>
+        </div>
+    </div>
+
+    <div class="job-type-options">
+
+        <label class="check-option">
+            <input type="checkbox" id="fullTime">
+            <span>Full Time</span>
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" id="internship">
+            <span>Internship</span>
+        </label>
+
+        <label class="check-option">
+            <input type="checkbox" id="freelance">
+            <span>Freelance</span>
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- AI Preferences -->
+<div class="settings-card">
+
+    <div class="settings-title">
+        <i class="fa-solid fa-robot"></i>
+        <div>
+            <h2>AI Preferences</h2>
+            <p>Control the AI features of your job tracker.</p>
+        </div>
+    </div>
+
+    <div class="setting-row">
+
+        <div>
+            <h3>AI Resume Suggestions</h3>
+            <p>Get suggestions to improve your resume.</p>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="aiResumeSuggestions" checked>
+            <span class="slider"></span>
+        </label>
+
+    </div>
+
+    <div class="setting-row">
+
+        <div>
+            <h3>Skill Gap Recommendations</h3>
+            <p>Get recommendations for missing skills.</p>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="aiSkillRecommendations" checked>
+            <span class="slider"></span>
+        </label>
+
+    </div>
+
+    <div class="setting-row">
+
+        <div>
+            <h3>Job Match Suggestions</h3>
+            <p>Get AI-based job matching suggestions.</p>
+        </div>
+
+        <label class="switch">
+            <input type="checkbox" id="aiJobMatching" checked>
+            <span class="slider"></span>
+        </label>
+
+    </div>
+
+</div>
+
+
+<!-- Danger Zone -->
+<div class="settings-card danger-zone">
+
+    <div class="settings-title">
+
+        <i class="fa-solid fa-triangle-exclamation"></i>
+
+        <div>
+            <h2>Danger Zone</h2>
+            <p>These actions cannot be easily undone.</p>
+        </div>
+
+    </div>
+
+    <div class="danger-actions">
+
+        <div>
+            <h3>Reset Dashboard</h3>
+            <p>Reset dashboard statistics and preferences.</p>
+        </div>
+
+        <button id="resetDashboardBtn" class="danger-btn">
+            Reset Dashboard
+        </button>
+
+    </div>
+
+    <div class="danger-actions">
+
+        <div>
+            <h3>Delete All Applications</h3>
+            <p>Remove all job applications from the dashboard.</p>
+        </div>
+
+        <button id="deleteAllApplicationsBtn" class="danger-btn">
+            Delete Applications
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- Save -->
+    <div class="settings-actions">
+        <button id="saveSettingsBtn" class="save-settings-btn">
+            <i class="fa-solid fa-floppy-disk"></i>
+            Save Changes
+        </button>
+    </div>
+
+</section>
+
+    </main>
+    
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- PDF.JS -->
+<!-- ================================================= -->
+
+<script type="module">
+
+    import * as pdfjsLib
+        from "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.min.mjs";
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.4.168/pdf.worker.min.mjs";
+
+    window.pdfjsLib = pdfjsLib;
+
+</script>
+
+
+<!-- Main JS -->
+<script src="script.js"></script>
 
 </body>
 </html>
